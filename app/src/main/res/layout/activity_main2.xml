@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/year1"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:background="@drawable/roundedbutton"
+        android:text="1st year"
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toTopOf="@+id/year3"
+        app:layout_constraintEnd_toEndOf="@+id/year2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/year2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <Button
+        android:id="@+id/year2"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:background="@drawable/roundedbutton"
+        android:text="2nd Year"
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/year3"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:background="@drawable/roundedbutton"
+        android:text="3rd year"
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toTopOf="@+id/year4"
+        app:layout_constraintEnd_toEndOf="@+id/year2"
+        app:layout_constraintStart_toStartOf="@+id/year2"
+        app:layout_constraintTop_toBottomOf="@+id/year2" />
+
+    <Button
+        android:id="@+id/year4"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:background="@drawable/roundedbutton"
+        android:text="4th year"
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/year3"
+        app:layout_constraintStart_toStartOf="@+id/year3"
+        app:layout_constraintTop_toBottomOf="@+id/year2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your year"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/year2"
+        app:layout_constraintEnd_toEndOf="@+id/year1"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/year1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Welcome to CGPA calculator"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
