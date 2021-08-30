@@ -34,7 +34,7 @@ public class manual extends AppCompatActivity {
     private TextView cr5;
 
     private Button calc;
-    int counter=0;
+    int counter=0;//hola master
 
 
     @Override
