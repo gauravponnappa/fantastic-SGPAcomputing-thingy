@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FourE extends AppCompatActivity {
 
@@ -49,44 +50,55 @@ public class FourE extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    float mr1 = Float.parseFloat(marks1.getText().toString());
-                    float mr2 = Float.parseFloat(marks2.getText().toString());
-                    float mr3 = Float.parseFloat(marks3.getText().toString());
-                    float mr4 = Float.parseFloat(marks4.getText().toString());
-                    float mr5 = Float.parseFloat(marks5.getText().toString());
+                    String mtest1 = marks1.getText().toString().trim();
+                    String mtest2 = marks2.getText().toString().trim();
+                    String mtest3 = marks3.getText().toString().trim();
+                    String mtest4 = marks4.getText().toString().trim();
+                    String mtest5 = marks5.getText().toString().trim();
 
-                    float s1 = Float.parseFloat(cr1.getText().toString());
-                    float s2 = Float.parseFloat(cr2.getText().toString());
-                    float s3 = Float.parseFloat(cr3.getText().toString());
-                    float s4 = Float.parseFloat(cr4.getText().toString());
-                    float s5 = Float.parseFloat(cr5.getText().toString());
+                    if (mtest1.equals("") || mtest2.equals("") || mtest3.equals("") || mtest4.equals("") || mtest5.equals("")) {
+                        Toast.makeText(FourE.this, "please fill all the fields", Toast.LENGTH_LONG).show();
+                    } else {
 
+                        float mr1 = Float.parseFloat(marks1.getText().toString());
+                        float mr2 = Float.parseFloat(marks2.getText().toString());
+                        float mr3 = Float.parseFloat(marks3.getText().toString());
+                        float mr4 = Float.parseFloat(marks4.getText().toString());
+                        float mr5 = Float.parseFloat(marks5.getText().toString());
 
-                    float total = mr1 + mr2 + mr3 + mr4 + mr5;
-
-                    float per1, per2, per3, per4, per5;
-
-
-                    per1 = (float) ((mr1 / 100.0) * s1);
-                    per2 = (float) ((mr1 / 100.0) * s2);
-                    per3 = (float) ((mr1 / 100.0) * s3);
-                    per4 = (float) ((mr1 / 100.0) * s4);
-                    per5 = (float) ((mr1 / 100.0) * s5);
+                        float s1 = Float.parseFloat(cr1.getText().toString());
+                        float s2 = Float.parseFloat(cr2.getText().toString());
+                        float s3 = Float.parseFloat(cr3.getText().toString());
+                        float s4 = Float.parseFloat(cr4.getText().toString());
+                        float s5 = Float.parseFloat(cr5.getText().toString());
 
 
+                        float total = mr1 + mr2 + mr3 + mr4 + mr5;
 
-                    float sgpa = (float) ((per1 + per2 + per3 + per4 + per5 ) / 1.8);
-                    float per = (total / 500) * 100;
+                        float per1, per2, per3, per4, per5;
 
-                    Intent intent = new Intent(FourE.this, results.class);
-                    Bundle extras = new Bundle();
-                    extras.putFloat("total_marks", total);
-                    extras.putFloat("per", per);
-                    extras.putFloat("sgpa", sgpa);
-                    intent.putExtras(extras);
-                    startActivity(intent);
 
+                        per1 = (float) ((mr1 / 100.0) * s1);
+                        per2 = (float) ((mr1 / 100.0) * s2);
+                        per3 = (float) ((mr1 / 100.0) * s3);
+                        per4 = (float) ((mr1 / 100.0) * s4);
+                        per5 = (float) ((mr1 / 100.0) * s5);
+
+
+                        float sgpa = (float) ((per1 + per2 + per3 + per4 + per5) / 1.8);
+                        float per = (total / 500) * 100;
+
+                        Intent intent = new Intent(FourE.this, results.class);
+                        Bundle extras = new Bundle();
+                        extras.putFloat("total_marks", total);
+                        extras.putFloat("per", per);
+                        extras.putFloat("sgpa", sgpa);
+                        intent.putExtras(extras);
+                        startActivity(intent);
+
+                    }
                 }
+
             });
 
         }
