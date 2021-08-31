@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class pcycle extends AppCompatActivity {
 
@@ -62,56 +63,67 @@ public class pcycle extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                float mr1 = Float.parseFloat(marks1.getText().toString());
-                float mr2 = Float.parseFloat(marks2.getText().toString());
-                float mr3 = Float.parseFloat(marks3.getText().toString());
-                float mr4 = Float.parseFloat(marks4.getText().toString());
-                float mr5 = Float.parseFloat(marks5.getText().toString());
-                float mr6 = Float.parseFloat(marks6.getText().toString());
-                float mr7 = Float.parseFloat(marks7.getText().toString());
-                float mr8 = Float.parseFloat(marks8.getText().toString());
-                float s1 = Float.parseFloat(cr1.getText().toString());
-                float s2 = Float.parseFloat(cr2.getText().toString());
-                float s3 = Float.parseFloat(cr3.getText().toString());
-                float s4 = Float.parseFloat(cr4.getText().toString());
-                float s5 = Float.parseFloat(cr5.getText().toString());
-                float s6 = Float.parseFloat(cr6.getText().toString());
-                float s7 = Float.parseFloat(cr7.getText().toString());
-                float s8 = Float.parseFloat(cr8.getText().toString());
+                String mtest1 = marks1.getText().toString().trim();
+                String mtest2 = marks2.getText().toString().trim();
+                String mtest3 = marks3.getText().toString().trim();
+                String mtest4 = marks4.getText().toString().trim();
+                String mtest5 = marks5.getText().toString().trim();
+                String mtest6 = marks6.getText().toString().trim();
+                String mtest7 = marks7.getText().toString().trim();
+                String mtest8 = marks8.getText().toString().trim();
+                if (mtest1.equals("") || mtest2.equals("") || mtest3.equals("") || mtest4.equals("") || mtest5.equals("") || mtest6.equals("") || mtest7.equals("") || mtest8.equals("")) {
+                    Toast.makeText(pcycle.this, "please fill all the fields", Toast.LENGTH_LONG).show();
+                } else {
+                    float mr1 = Float.parseFloat(marks1.getText().toString());
+                    float mr2 = Float.parseFloat(marks2.getText().toString());
+                    float mr3 = Float.parseFloat(marks3.getText().toString());
+                    float mr4 = Float.parseFloat(marks4.getText().toString());
+                    float mr5 = Float.parseFloat(marks5.getText().toString());
+                    float mr6 = Float.parseFloat(marks6.getText().toString());
+                    float mr7 = Float.parseFloat(marks7.getText().toString());
+                    float mr8 = Float.parseFloat(marks8.getText().toString());
+                    float s1 = Float.parseFloat(cr1.getText().toString());
+                    float s2 = Float.parseFloat(cr2.getText().toString());
+                    float s3 = Float.parseFloat(cr3.getText().toString());
+                    float s4 = Float.parseFloat(cr4.getText().toString());
+                    float s5 = Float.parseFloat(cr5.getText().toString());
+                    float s6 = Float.parseFloat(cr6.getText().toString());
+                    float s7 = Float.parseFloat(cr7.getText().toString());
+                    float s8 = Float.parseFloat(cr8.getText().toString());
 
 
-                float total=mr1+mr2+mr3+mr4+mr5+mr6+mr7+mr8;
+                    float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
 
-                float per1,per2,per3,per4,per5,per6,per7,per8;
-
-
-                per1= (float) ((mr1/100.0)*4.0);
-                per2= (float) ((mr1/100.0)*4.0);
-                per3= (float) ((mr1/100.0)*3.0);
-                per4= (float) ((mr1/100.0)*3.0);
-                per5= (float) ((mr1/100.0)*3.0);
-                per6= (float) ((mr1/100.0)*1.0);
-                per7= (float) ((mr1/100.0)*1.0);
-                per8= (float) ((mr1/100.0)*1.0);
+                    float per1, per2, per3, per4, per5, per6, per7, per8;
 
 
-                float sgpa=(per1+per2+per3+per4+per5+per6+per7+per8)/2;
-                float per=(total/800)*100;
+                    per1 = (float) ((mr1 / 100.0) * 4.0);
+                    per2 = (float) ((mr1 / 100.0) * 4.0);
+                    per3 = (float) ((mr1 / 100.0) * 3.0);
+                    per4 = (float) ((mr1 / 100.0) * 3.0);
+                    per5 = (float) ((mr1 / 100.0) * 3.0);
+                    per6 = (float) ((mr1 / 100.0) * 1.0);
+                    per7 = (float) ((mr1 / 100.0) * 1.0);
+                    per8 = (float) ((mr1 / 100.0) * 1.0);
 
-                Intent intent = new Intent(pcycle.this, results.class);
-                Bundle extras = new Bundle();
-                extras.putFloat("total_marks",total);
-                extras.putFloat("per",per);
-                extras.putFloat("sgpa",sgpa);
-                intent.putExtras(extras);
-                startActivity(intent);
 
+                    float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / 2;
+                    float per = (total / 800) * 100;
+
+                    Intent intent = new Intent(pcycle.this, results.class);
+                    Bundle extras = new Bundle();
+                    extras.putFloat("total_marks", total);
+                    extras.putFloat("per", per);
+                    extras.putFloat("sgpa", sgpa);
+                    intent.putExtras(extras);
+                    startActivity(intent);
+
+                }
             }
      });
+}
 
 
 
 
-
-    }
 }

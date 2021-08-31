@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ThreeO extends AppCompatActivity {
 
@@ -62,6 +63,18 @@ public class ThreeO extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String mtest1 = marks1.getText().toString().trim();
+                String mtest2 = marks2.getText().toString().trim();
+                String mtest3 = marks3.getText().toString().trim();
+                String mtest4 = marks4.getText().toString().trim();
+                String mtest5 = marks5.getText().toString().trim();
+                String mtest6 = marks6.getText().toString().trim();
+                String mtest7 = marks7.getText().toString().trim();
+                String mtest8 = marks8.getText().toString().trim();
+                if (mtest1.equals("") || mtest2.equals("") || mtest3.equals("") || mtest4.equals("") || mtest5.equals("") || mtest6.equals("") || mtest7.equals("") || mtest8.equals("")) {
+                    Toast.makeText(ThreeO.this, "please fill all the fields", Toast.LENGTH_LONG).show();
+                } else {
+
                 float mr1 = Float.parseFloat(marks1.getText().toString());
                 float mr2 = Float.parseFloat(marks2.getText().toString());
                 float mr3 = Float.parseFloat(marks3.getText().toString());
@@ -110,8 +123,10 @@ public class ThreeO extends AppCompatActivity {
                 intent.putExtras(extras);
                 startActivity(intent);
 
+                }
             }
-        });
+        }
+        );
 
     }
 
