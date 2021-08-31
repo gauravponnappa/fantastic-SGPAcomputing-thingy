@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ccycle extends AppCompatActivity {
 
@@ -59,51 +61,62 @@ public class ccycle extends AppCompatActivity {
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int checkemty=0;
+                if (TextUtils.isEmpty((CharSequence) marks1)){
 
-                float mr1 = Float.parseFloat(marks1.getText().toString());
-                float mr2 = Float.parseFloat(marks2.getText().toString());
-                float mr3 = Float.parseFloat(marks3.getText().toString());
-                float mr4 = Float.parseFloat(marks4.getText().toString());
-                float mr5 = Float.parseFloat(marks5.getText().toString());
-                float mr6 = Float.parseFloat(marks6.getText().toString());
-                float mr7 = Float.parseFloat(marks7.getText().toString());
-                float mr8 = Float.parseFloat(marks8.getText().toString());
-                float s1 = Float.parseFloat(cr1.getText().toString());
-                float s2 = Float.parseFloat(cr2.getText().toString());
-                float s3 = Float.parseFloat(cr3.getText().toString());
-                float s4 = Float.parseFloat(cr4.getText().toString());
-                float s5 = Float.parseFloat(cr5.getText().toString());
-                float s6 = Float.parseFloat(cr6.getText().toString());
-                float s7 = Float.parseFloat(cr7.getText().toString());
-                float s8 = Float.parseFloat(cr8.getText().toString());
+                    checkemty=1;
+                }
 
+                if (checkemty==1){
 
-                float total=mr1+mr2+mr3+mr4+mr5+mr6+mr7+mr8;
+                    Toast.makeText(ccycle.this, "please fill all the fields", Toast.LENGTH_LONG).show();
 
-                float per1,per2,per3,per4,per5,per6,per7,per8;
-
-
-                per1= (float) ((mr1/100.0)*4.0);
-                per2= (float) ((mr1/100.0)*4.0);
-                per3= (float) ((mr1/100.0)*3.0);
-                per4= (float) ((mr1/100.0)*3.0);
-                per5= (float) ((mr1/100.0)*3.0);
-                per6= (float) ((mr1/100.0)*1.0);
-                per7= (float) ((mr1/100.0)*1.0);
-                per8= (float) ((mr1/100.0)*1.0);
+                }
+                else {
+                    float mr1 = Float.parseFloat(marks1.getText().toString());
+                    float mr2 = Float.parseFloat(marks2.getText().toString());
+                    float mr3 = Float.parseFloat(marks3.getText().toString());
+                    float mr4 = Float.parseFloat(marks4.getText().toString());
+                    float mr5 = Float.parseFloat(marks5.getText().toString());
+                    float mr6 = Float.parseFloat(marks6.getText().toString());
+                    float mr7 = Float.parseFloat(marks7.getText().toString());
+                    float mr8 = Float.parseFloat(marks8.getText().toString());
+                    float s1 = Float.parseFloat(cr1.getText().toString());
+                    float s2 = Float.parseFloat(cr2.getText().toString());
+                    float s3 = Float.parseFloat(cr3.getText().toString());
+                    float s4 = Float.parseFloat(cr4.getText().toString());
+                    float s5 = Float.parseFloat(cr5.getText().toString());
+                    float s6 = Float.parseFloat(cr6.getText().toString());
+                    float s7 = Float.parseFloat(cr7.getText().toString());
+                    float s8 = Float.parseFloat(cr8.getText().toString());
 
 
-                float sgpa=(per1+per2+per3+per4+per5+per6+per7+per8)/2;
-                float per=(total/800)*100;
+                    float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
 
-                Intent intent = new Intent(ccycle.this, results.class);
-                Bundle extras = new Bundle();
-                extras.putFloat("total_marks",total);
-                extras.putFloat("per",per);
-                extras.putFloat("sgpa",sgpa);
-                intent.putExtras(extras);
-                startActivity(intent);
+                    float per1, per2, per3, per4, per5, per6, per7, per8;
 
+
+                    per1 = (float) ((mr1 / 100.0) * 4.0);
+                    per2 = (float) ((mr1 / 100.0) * 4.0);
+                    per3 = (float) ((mr1 / 100.0) * 3.0);
+                    per4 = (float) ((mr1 / 100.0) * 3.0);
+                    per5 = (float) ((mr1 / 100.0) * 3.0);
+                    per6 = (float) ((mr1 / 100.0) * 1.0);
+                    per7 = (float) ((mr1 / 100.0) * 1.0);
+                    per8 = (float) ((mr1 / 100.0) * 1.0);
+
+
+                    float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / 2;
+                    float per = (total / 800) * 100;
+
+                    Intent intent = new Intent(ccycle.this, results.class);
+                    Bundle extras = new Bundle();
+                    extras.putFloat("total_marks", total);
+                    extras.putFloat("per", per);
+                    extras.putFloat("sgpa", sgpa);
+                    intent.putExtras(extras);
+                    startActivity(intent);
+                }
             }
         });
 

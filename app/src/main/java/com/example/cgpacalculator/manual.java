@@ -26,22 +26,22 @@ public class manual extends AppCompatActivity {
     private EditText marks3;
     private EditText marks4;
     private EditText marks5;
+   /*private EditText marks5;
     private EditText marks5;
     private EditText marks5;
     private EditText marks5;
-    private EditText marks5;
-    private EditText marks5;
+    private EditText marks5;*/
 
     private TextView cr1;
     private TextView cr2;
     private TextView cr3;
     private TextView cr4;
     private TextView cr5;
+   /* private TextView cr5;
     private TextView cr5;
     private TextView cr5;
     private TextView cr5;
-    private TextView cr5;
-    private TextView cr5;
+    private TextView cr5;*/
 
     private Button calc;
     int counter=0;
@@ -114,22 +114,22 @@ public class manual extends AppCompatActivity {
                 float mr3 = Float.parseFloat(marks3.getText().toString());
                 float mr4 = Float.parseFloat(marks4.getText().toString());
                 float mr5 = Float.parseFloat(marks5.getText().toString());
+                /*float mr5 = Float.parseFloat(marks5.getText().toString());
                 float mr5 = Float.parseFloat(marks5.getText().toString());
                 float mr5 = Float.parseFloat(marks5.getText().toString());
                 float mr5 = Float.parseFloat(marks5.getText().toString());
-                float mr5 = Float.parseFloat(marks5.getText().toString());
-                float mr5 = Float.parseFloat(marks5.getText().toString());
+                float mr5 = Float.parseFloat(marks5.getText().toString());*/
 
                 float s1 = Float.parseFloat(cr1.getText().toString());
                 float s2 = Float.parseFloat(cr2.getText().toString());
                 float s3 = Float.parseFloat(cr3.getText().toString());
                 float s4 = Float.parseFloat(cr4.getText().toString());
                 float s5 = Float.parseFloat(cr5.getText().toString());
+               /* float s5 = Float.parseFloat(cr5.getText().toString());
                 float s5 = Float.parseFloat(cr5.getText().toString());
                 float s5 = Float.parseFloat(cr5.getText().toString());
                 float s5 = Float.parseFloat(cr5.getText().toString());
-                float s5 = Float.parseFloat(cr5.getText().toString());
-                float s5 = Float.parseFloat(cr5.getText().toString());
+                float s5 = Float.parseFloat(cr5.getText().toString());*/
 
 
                 float total = mr1 + mr2 + mr3 + mr4 + mr5;
