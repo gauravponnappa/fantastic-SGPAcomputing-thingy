@@ -94,32 +94,39 @@ public class ccycle extends AppCompatActivity {
                     float s7 = Float.parseFloat(cr7.getText().toString());
                     float s8 = Float.parseFloat(cr8.getText().toString());
 
+                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100){
 
-                    float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
+                        Toast.makeText(ccycle.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
-                    float per1, per2, per3, per4, per5, per6, per7, per8;
+                    }
 
+                    else {
+                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
 
-                    per1 = (float) ((mr1 / 100.0) * 4.0);
-                    per2 = (float) ((mr1 / 100.0) * 4.0);
-                    per3 = (float) ((mr1 / 100.0) * 3.0);
-                    per4 = (float) ((mr1 / 100.0) * 3.0);
-                    per5 = (float) ((mr1 / 100.0) * 3.0);
-                    per6 = (float) ((mr1 / 100.0) * 1.0);
-                    per7 = (float) ((mr1 / 100.0) * 1.0);
-                    per8 = (float) ((mr1 / 100.0) * 1.0);
+                        float per1, per2, per3, per4, per5, per6, per7, per8;
 
 
-                    float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / 2;
-                    float per = (total / 800) * 100;
+                        per1 = (float) ((mr1 / 100.0) * 4.0);
+                        per2 = (float) ((mr1 / 100.0) * 4.0);
+                        per3 = (float) ((mr1 / 100.0) * 3.0);
+                        per4 = (float) ((mr1 / 100.0) * 3.0);
+                        per5 = (float) ((mr1 / 100.0) * 3.0);
+                        per6 = (float) ((mr1 / 100.0) * 1.0);
+                        per7 = (float) ((mr1 / 100.0) * 1.0);
+                        per8 = (float) ((mr1 / 100.0) * 1.0);
 
-                    Intent intent = new Intent(ccycle.this, results.class);
-                    Bundle extras = new Bundle();
-                    extras.putFloat("total_marks", total);
-                    extras.putFloat("per", per);
-                    extras.putFloat("sgpa", sgpa);
-                    intent.putExtras(extras);
-                    startActivity(intent);
+
+                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / 2;
+                        float per = (total / 800) * 100;
+
+                        Intent intent = new Intent(ccycle.this, results.class);
+                        Bundle extras = new Bundle();
+                        extras.putFloat("total_marks", total);
+                        extras.putFloat("per", per);
+                        extras.putFloat("sgpa", sgpa);
+                        intent.putExtras(extras);
+                        startActivity(intent);
+                    }
                 }
             }
         });

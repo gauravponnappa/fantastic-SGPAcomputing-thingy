@@ -72,29 +72,38 @@ public class FourE extends AppCompatActivity {
                         float s4 = Float.parseFloat(cr4.getText().toString());
                         float s5 = Float.parseFloat(cr5.getText().toString());
 
+                        if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100){
 
-                        float total = mr1 + mr2 + mr3 + mr4 + mr5;
+                            Toast.makeText(FourE.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
-                        float per1, per2, per3, per4, per5;
+                        }
 
-
-                        per1 = (float) ((mr1 / 100.0) * s1);
-                        per2 = (float) ((mr1 / 100.0) * s2);
-                        per3 = (float) ((mr1 / 100.0) * s3);
-                        per4 = (float) ((mr1 / 100.0) * s4);
-                        per5 = (float) ((mr1 / 100.0) * s5);
+                        else {
 
 
-                        float sgpa = (float) ((per1 + per2 + per3 + per4 + per5) / 1.8);
-                        float per = (total / 500) * 100;
+                            float total = mr1 + mr2 + mr3 + mr4 + mr5;
 
-                        Intent intent = new Intent(FourE.this, results.class);
-                        Bundle extras = new Bundle();
-                        extras.putFloat("total_marks", total);
-                        extras.putFloat("per", per);
-                        extras.putFloat("sgpa", sgpa);
-                        intent.putExtras(extras);
-                        startActivity(intent);
+                            float per1, per2, per3, per4, per5;
+
+
+                            per1 = (float) ((mr1 / 100.0) * s1);
+                            per2 = (float) ((mr1 / 100.0) * s2);
+                            per3 = (float) ((mr1 / 100.0) * s3);
+                            per4 = (float) ((mr1 / 100.0) * s4);
+                            per5 = (float) ((mr1 / 100.0) * s5);
+
+
+                            float sgpa = (float) ((per1 + per2 + per3 + per4 + per5) / 1.8);
+                            float per = (total / 500) * 100;
+
+                            Intent intent = new Intent(FourE.this, results.class);
+                            Bundle extras = new Bundle();
+                            extras.putFloat("total_marks", total);
+                            extras.putFloat("per", per);
+                            extras.putFloat("sgpa", sgpa);
+                            intent.putExtras(extras);
+                            startActivity(intent);
+                        }
 
                     }
                 }
