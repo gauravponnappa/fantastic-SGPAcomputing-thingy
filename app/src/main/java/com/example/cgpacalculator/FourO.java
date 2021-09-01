@@ -84,31 +84,40 @@ public class FourO extends AppCompatActivity {
                         float s6 = Float.parseFloat(cr6.getText().toString());
                         float s7 = Float.parseFloat(cr7.getText().toString());
 
+                        if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100){
 
-                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7;
+                            Toast.makeText(FourO.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
-                        float per1, per2, per3, per4, per5, per6, per7;
+                        }
 
-
-                        per1 = (float) ((mr1 / 100.0) * s1);
-                        per2 = (float) ((mr1 / 100.0) * s2);
-                        per3 = (float) ((mr1 / 100.0) * s3);
-                        per4 = (float) ((mr1 / 100.0) * s4);
-                        per5 = (float) ((mr1 / 100.0) * s5);
-                        per6 = (float) ((mr1 / 100.0) * s6);
-                        per7 = (float) ((mr1 / 100.0) * s7);
+                        else {
 
 
-                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7) / 2;
-                        float per = (total / 700) * 100;
+                            float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7;
 
-                        Intent intent = new Intent(FourO.this, results.class);
-                        Bundle extras = new Bundle();
-                        extras.putFloat("total_marks", total);
-                        extras.putFloat("per", per);
-                        extras.putFloat("sgpa", sgpa);
-                        intent.putExtras(extras);
-                        startActivity(intent);
+                            float per1, per2, per3, per4, per5, per6, per7;
+
+
+                            per1 = (float) ((mr1 / 100.0) * s1);
+                            per2 = (float) ((mr1 / 100.0) * s2);
+                            per3 = (float) ((mr1 / 100.0) * s3);
+                            per4 = (float) ((mr1 / 100.0) * s4);
+                            per5 = (float) ((mr1 / 100.0) * s5);
+                            per6 = (float) ((mr1 / 100.0) * s6);
+                            per7 = (float) ((mr1 / 100.0) * s7);
+
+
+                            float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7) / 2;
+                            float per = (total / 700) * 100;
+
+                            Intent intent = new Intent(FourO.this, results.class);
+                            Bundle extras = new Bundle();
+                            extras.putFloat("total_marks", total);
+                            extras.putFloat("per", per);
+                            extras.putFloat("sgpa", sgpa);
+                            intent.putExtras(extras);
+                            startActivity(intent);
+                        }
 
                     }
                 }

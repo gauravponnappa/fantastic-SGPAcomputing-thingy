@@ -93,33 +93,42 @@ public class TowO extends AppCompatActivity {
                     float s8 = Float.parseFloat(cr8.getText().toString());
                     float s9 = Float.parseFloat(cr9.getText().toString());
 
+                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100){
 
-                    float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8 + mr9;
+                        Toast.makeText(TowO.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
-                    float per1, per2, per3, per4, per5, per6, per7, per8, per9;
+                    }
 
-
-                    per1 = (float) ((mr1 / 100.0) * s1);
-                    per2 = (float) ((mr1 / 100.0) * s2);
-                    per3 = (float) ((mr1 / 100.0) * s3);
-                    per4 = (float) ((mr1 / 100.0) * s4);
-                    per5 = (float) ((mr1 / 100.0) * s5);
-                    per6 = (float) ((mr1 / 100.0) * s6);
-                    per7 = (float) ((mr1 / 100.0) * s7);
-                    per8 = (float) ((mr1 / 100.0) * s8);
-                    per9 = (float) ((mr1 / 100.0) * s9);
+                    else {
 
 
-                    float sgpa = (float) ((per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8 + per9) / 2.4);
-                    float per = (total / 900) * 100;
+                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8 + mr9;
 
-                    Intent intent = new Intent(TowO.this, results.class);
-                    Bundle extras = new Bundle();
-                    extras.putFloat("total_marks", total);
-                    extras.putFloat("per", per);
-                    extras.putFloat("sgpa", sgpa);
-                    intent.putExtras(extras);
-                    startActivity(intent);
+                        float per1, per2, per3, per4, per5, per6, per7, per8, per9;
+
+
+                        per1 = (float) ((mr1 / 100.0) * s1);
+                        per2 = (float) ((mr1 / 100.0) * s2);
+                        per3 = (float) ((mr1 / 100.0) * s3);
+                        per4 = (float) ((mr1 / 100.0) * s4);
+                        per5 = (float) ((mr1 / 100.0) * s5);
+                        per6 = (float) ((mr1 / 100.0) * s6);
+                        per7 = (float) ((mr1 / 100.0) * s7);
+                        per8 = (float) ((mr1 / 100.0) * s8);
+                        per9 = (float) ((mr1 / 100.0) * s9);
+
+
+                        float sgpa = (float) ((per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8 + per9) / 2.4);
+                        float per = (total / 900) * 100;
+
+                        Intent intent = new Intent(TowO.this, results.class);
+                        Bundle extras = new Bundle();
+                        extras.putFloat("total_marks", total);
+                        extras.putFloat("per", per);
+                        extras.putFloat("sgpa", sgpa);
+                        intent.putExtras(extras);
+                        startActivity(intent);
+                    }
 
                 }
             }
