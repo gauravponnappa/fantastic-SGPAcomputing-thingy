@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class manual extends AppCompatActivity {
 
-    private ImageView addrow;
+    private Button addrow;
     private Button reset;
     private TableRow row5;
     private TableRow row6;

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CGPACalculator">
-        <activity android:name=".fourE17"></activity>
+        <activity android:name=".fourE17" />
         <activity android:name=".fourO17" />
         <activity android:name=".threeO17" />
         <activity android:name=".threeE17" />
@@ -46,5 +46,5 @@
             </intent-filter>
         </activity>
     </application>
-<!--Test comment added from test-branch-->
+
 </manifest>
