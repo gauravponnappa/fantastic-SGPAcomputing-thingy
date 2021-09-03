@@ -5,9 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".manual_new">
+    android:background="@color/black"
+    tools:context=".manual">
 
     <TableLayout
+        android:id="@+id/tableLayout2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
@@ -406,12 +408,12 @@
         android:id="@+id/addrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Add a Subject"
+        android:layout_marginBottom="22dp"
         android:background="@drawable/roundedbutton"
+        android:text="Add a Subject"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -424,4 +426,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addrow"
         app:layout_constraintTop_toTopOf="@+id/addrow" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="534dp"
+        android:layout_height="189dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:srcCompat="@drawable/rules" />
 </androidx.constraintlayout.widget.ConstraintLayout>
