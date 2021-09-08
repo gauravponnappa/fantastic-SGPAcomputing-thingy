@@ -400,7 +400,7 @@ tools:context=".ccycle">
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
+        android:background="@drawable/roundedbutton"
         android:text="reset" />
 
     <TextView
@@ -417,7 +417,7 @@ tools:context=".ccycle">
         android:id="@+id/buttoncalc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
+        android:background="@drawable/roundedbutton"
         android:text="calculate" />
 </TableRow>
 

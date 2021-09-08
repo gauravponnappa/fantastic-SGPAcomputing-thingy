@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFFF00</color> //buttons
-    <color name="purple_500">#a95aec</color>//whole theme
-    <color name="purple_700">#FF000000</color>//status bar
-    <color name="teal_200">#FFFF00</color>//cursor
+    <color name="purple_500">#3895D3</color>//whole theme
+    <color name="purple_700">#222222</color>//status bar
+    <color name="teal_200">#FFFFff</color>//cursor
     <color name="teal_700">#FFFF00</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>

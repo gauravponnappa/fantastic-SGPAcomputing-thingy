@@ -2,80 +2,90 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#18191A"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#222222"
     tools:context=".Scheme">
 
 
 
-    <Button
-        android:id="@+id/scheme17"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/roundedbutton"
-
-        android:text="2017 SCHEME"
-        app:layout_constraintBottom_toTopOf="@+id/scheme"
-        app:layout_constraintEnd_toEndOf="@+id/scheme18"
-        app:layout_constraintStart_toStartOf="@+id/scheme18"
-        app:layout_constraintTop_toBottomOf="@+id/scheme18" />
 
     <Button
         android:id="@+id/scheme18"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="32dp"
-
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/roundedbutton"
         android:text="2018 SCHEME"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
         android:id="@+id/scheme"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
 
-        android:layout_height="120dp"
+        android:layout_height="100dp"
+
         android:background="@drawable/roundedbutton"
         android:text="Manual Mode"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/scheme17"
-        app:layout_constraintStart_toStartOf="@+id/scheme17"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintBottom_toBottomOf="@+id/scheme18"
+        app:layout_constraintEnd_toStartOf="@+id/scheme18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scheme18" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:text="SGPA calculator"
+        android:layout_width="385dp"
+        android:layout_height="178dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Welcome to SGPA calculator"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:text="please select your VTU scheme to proceed "
-        app:layout_constraintBottom_toTopOf="@+id/scheme17"
+        android:layout_width="352dp"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:text="Select your VTU scheme to proceed "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/scheme17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scheme18" />
+
+    <Button
+        android:id="@+id/scheme17"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/roundedbutton"
+        android:text="2017 scheme"
+        app:layout_constraintBottom_toBottomOf="@+id/scheme18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scheme18"
+        app:layout_constraintTop_toTopOf="@+id/scheme18" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="1204dp"
+        android:layout_height="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/divider" />
+    <ImageView
+    android:id="@+id/imageView33"
+    android:layout_width="1204dp"
+    android:layout_height="18dp"
+    app:layout_constraintEnd_toEndOf="@+id/textView8"
+    app:layout_constraintStart_toStartOf="@+id/textView8"
+    app:layout_constraintBottom_toTopOf="@+id/textView8"
+    app:srcCompat="@drawable/divider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
