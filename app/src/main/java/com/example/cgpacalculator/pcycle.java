@@ -30,6 +30,7 @@ public class pcycle extends AppCompatActivity {
     private TextView cr7;
     private TextView cr8;
     private Button calc;
+    private Button reset;
     int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8;
 
 
@@ -58,7 +59,21 @@ public class pcycle extends AppCompatActivity {
         calc=findViewById(R.id.buttoncalc);
 
 
+        reset=findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                marks1.setText("");
+                marks2.setText("");
+                marks3.setText("");
+                marks4.setText("");
+                marks5.setText("");
+                marks6.setText("");
+                marks7.setText("");
+                marks8.setText("");
+            }
+        });
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override

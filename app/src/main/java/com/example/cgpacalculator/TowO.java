@@ -30,8 +30,9 @@ public class TowO extends AppCompatActivity {
     private TextView cr8;
     private TextView cr9;
     private Button calc;
-    int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8;
-
+    private Button reset;
+    int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8,obtcrd9;
+    private TextView sub2,sub3,sub4,sub5,sub6,sub7,sub8,sub9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,142 @@ public class TowO extends AppCompatActivity {
         cr9 = findViewById(R.id.cr9);
         calc = findViewById(R.id.buttoncalc);
 
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        int branch = extras.getInt("branch");
+        if (branch==1)
+        {
+
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18EC32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18EC33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18EC34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18EC35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18EC36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18ECL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18ECL38");
+
+        }
+
+        if (branch==2)
+        {
+
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18CS32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18CS33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18CS34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18CS35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18CS36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18CSL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18CSL38");
+
+        }
+        if (branch==3)
+        {
+
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18IS32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18IS33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18IS34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18IS35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18IS36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18ISL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18ISL38");
+
+        }
+        if (branch==4)
+        {
+
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18CV32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18CV33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18CV34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18CV35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18CV36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18CVL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18CVL38");
+
+        }
+        if (branch==5)
+        {
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18ME32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18ME33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18ME34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18ME35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18ME36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18MEL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18MEL38");
+
+        }
+        if (branch==6)
+        {
+
+            sub3 = findViewById(R.id.sub32);
+            sub3.setText("18EE32");
+            sub4 = findViewById(R.id.sub33);
+            sub4.setText("18EE33");
+            sub5 = findViewById(R.id.sub34);
+            sub5.setText("18EE34");
+            sub6 = findViewById(R.id.sub35);
+            sub6.setText("18EE35");
+            sub7 = findViewById(R.id.sub36);
+            sub7.setText("18EE36");
+            sub8 = findViewById(R.id.sub37);
+            sub8.setText("18EEL37");
+            sub9 = findViewById(R.id.sub38);
+            sub9.setText("18EEL38");
+
+        }
+
+        reset=findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                marks1.setText("");
+                marks2.setText("");
+                marks3.setText("");
+                marks4.setText("");
+                marks5.setText("");
+                marks6.setText("");
+                marks7.setText("");
+                marks8.setText("");
+                marks9.setText("");
+
+            }
+        });
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +284,15 @@ public class TowO extends AppCompatActivity {
                     if (mr8>=70&&mr8<80){obtcrd8=8;}
                     if (mr8>=80&&mr8<89){obtcrd8=9;}
                     if (mr8>=90){obtcrd8=10;}
+                    float mr9 = Float.parseFloat(marks9.getText().toString());
+                    if (mr8<35){obtcrd8=0;}
+                    if (mr8>=35&&mr8<40){obtcrd8=4;}
+                    if (mr8>=40&&mr8<45){obtcrd8=5;}
+                    if (mr8>=45&&mr8<60){obtcrd8=6;}
+                    if (mr8>=60&&mr8<70){obtcrd8=7;}
+                    if (mr8>=70&&mr8<80){obtcrd8=8;}
+                    if (mr8>=80&&mr8<89){obtcrd8=9;}
+                    if (mr8>=90){obtcrd8=10;}
                     float s1 = Float.parseFloat(cr1.getText().toString());
                     float s2 = Float.parseFloat(cr2.getText().toString());
                     float s3 = Float.parseFloat(cr3.getText().toString());
@@ -155,17 +301,18 @@ public class TowO extends AppCompatActivity {
                     float s6 = Float.parseFloat(cr6.getText().toString());
                     float s7 = Float.parseFloat(cr7.getText().toString());
                     float s8 = Float.parseFloat(cr8.getText().toString());
+                    float s9 = Float.parseFloat(cr9.getText().toString());
 
-                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100){
+                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100||mr9>100){
 
                         Toast.makeText(TowO.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
                     }
 
                     else {
-                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
+                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8 +mr9;
 
-                        float per1, per2, per3, per4, per5, per6, per7, per8;
+                        float per1, per2, per3, per4, per5, per6, per7, per8,per9;
 
 
                         per1=(s1*obtcrd1);
@@ -176,9 +323,10 @@ public class TowO extends AppCompatActivity {
                         per6=(s6*obtcrd6);
                         per7=(s7*obtcrd7);
                         per8=(s8*obtcrd8);
+                        per9=(s9*obtcrd9);
 
 
-                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / (s1+s2+s3+s4+s5+s6+s7+s8);
+                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8+per9) / (s1+s2+s3+s4+s5+s6+s7+s8);
                         float per = (total / 900) * 100;
 
                         Intent intent = new Intent(TowO.this, results.class);

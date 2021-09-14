@@ -30,7 +30,9 @@ public class ThreeE extends AppCompatActivity {
         private TextView cr7;
         private TextView cr8;
         private Button calc;
+        private Button reset;
     int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8;
+    private TextView sub2,sub3,sub4,sub5,sub6,sub7,sub8,sub9;
 
 
     @Override
@@ -55,6 +57,148 @@ public class ThreeE extends AppCompatActivity {
             cr7 = findViewById(R.id.cr7);
             cr8 = findViewById(R.id.cr8);
             calc = findViewById(R.id.buttoncalc);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        int branch = extras.getInt("branch");
+
+        if (branch==1)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18EC61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18EC62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18EC63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18EC64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18EC65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18EC66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18ECL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18ECL68");
+
+        }
+        if (branch==2)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18CS61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18CS62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18CS63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18CS64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18CS65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18CS66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18CSL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18CSL68");
+
+        }
+        if (branch==3)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18IS61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18IS62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18IS63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18IS64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18IS65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18IS66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18ISL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18ISL68");
+
+        }
+        if (branch==4)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18CV61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18CV62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18CV63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18CV64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18CV65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18CV66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18CVL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18CVL68");
+
+        }
+        if (branch==5)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18ME61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18ME62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18ME63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18ME64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18ME65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18ME66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18MEL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18MEL68");
+
+        }
+        if (branch==6)
+        {
+            sub2 = findViewById(R.id.sub61);
+            sub2.setText("18EE61");
+            sub3 = findViewById(R.id.sub62);
+            sub3.setText("18EE62");
+            sub4 = findViewById(R.id.sub63);
+            sub4.setText("18EE63");
+            sub5 = findViewById(R.id.sub64);
+            sub5.setText("18EE64");
+            sub6 = findViewById(R.id.sub65);
+            sub6.setText("18EE65");
+            sub7 = findViewById(R.id.sub66);
+            sub7.setText("18EE66");
+            sub8 = findViewById(R.id.sub67);
+            sub8.setText("18EEL67");
+            sub9 = findViewById(R.id.sub68);
+            sub9.setText("18EEL68");
+
+        }
+
+        reset=findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                marks1.setText("");
+                marks2.setText("");
+                marks3.setText("");
+                marks4.setText("");
+                marks5.setText("");
+                marks6.setText("");
+                marks7.setText("");
+                marks8.setText("");
+
+            }
+        });
 
 
             calc.setOnClickListener(new View.OnClickListener() {

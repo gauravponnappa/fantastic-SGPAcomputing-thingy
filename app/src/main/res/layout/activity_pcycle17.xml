@@ -397,10 +397,10 @@
         android:background="#000000">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@drawable/roundedbutton"
             android:text="reset" />
 
         <Space
@@ -411,7 +411,7 @@
             android:id="@+id/buttoncalc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@drawable/roundedbutton"
             android:text="calculate" />
     </TableRow>
 

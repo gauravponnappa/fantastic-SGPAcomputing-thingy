@@ -60,6 +60,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub71"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -103,6 +104,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub72"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -145,6 +147,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub73"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -187,6 +190,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub74"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -229,6 +233,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub75"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -271,6 +276,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub76"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -313,6 +319,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub77"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -354,20 +361,29 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
             android:text="Reset" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/buttoncalc"
-            android:layout_width="25dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
             android:text="Calculate" />
+
     </TableRow>
 
 

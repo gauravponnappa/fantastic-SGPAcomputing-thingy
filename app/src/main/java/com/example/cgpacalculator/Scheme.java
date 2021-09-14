@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lalongooo.Rings;
@@ -36,6 +37,7 @@ public class Scheme extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     /////////////////////////////////////////////////////////
 
 
@@ -43,14 +45,22 @@ public class Scheme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheme);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        int branch = extras.getInt("branch");
+
         Button sc18 = (Button) findViewById(R.id.scheme18);
 
         sc18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int branch = extras.getInt("branch");
                 Intent intent = new Intent(Scheme.this, MainActivity2.class);
-                startActivity(intent);
-            }
+                Bundle extras = new Bundle();
+                extras.putInt("branch", branch);
+                intent.putExtras(extras);
+                startActivity(intent);                  }
         });
 
 

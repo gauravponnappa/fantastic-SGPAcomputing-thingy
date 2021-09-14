@@ -4,12 +4,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/main_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/main_icon"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.CGPACalculator">
-        <activity android:name=".fourE17"></activity>
+        <activity android:name=".Branch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fourE17" />
         <activity android:name=".fourO17" />
         <activity android:name=".threeO17" />
         <activity android:name=".threeE17" />
@@ -19,13 +27,6 @@
         <activity android:name=".pcycle17" />
         <activity android:name=".manual" />
         <activity android:name=".year17" />
-        <activity android:name=".Scheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".results" />
         <activity android:name=".FourO" />
         <activity android:name=".FourE" />
@@ -38,13 +39,9 @@
         <activity android:name=".evenodd" />
         <activity android:name=".MainActivity3" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".MainActivity2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".Scheme"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
-<!--Test comment added from test-branch-->
+
 </manifest>
