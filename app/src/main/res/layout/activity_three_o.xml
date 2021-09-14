@@ -60,6 +60,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub51"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -103,6 +104,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub52"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -145,6 +147,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub53"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -187,6 +190,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub54"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -229,6 +233,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub55"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -271,6 +276,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub56"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -313,6 +319,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub57"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -355,6 +362,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub58"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -396,6 +404,7 @@
         android:background="#ffffff">
 
         <TextView
+            android:id="@+id/sub59"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -437,7 +446,7 @@
         android:background="#000000">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/roundedbutton"

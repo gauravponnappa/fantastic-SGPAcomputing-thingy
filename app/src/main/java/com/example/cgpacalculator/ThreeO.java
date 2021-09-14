@@ -32,7 +32,9 @@ public class ThreeO extends AppCompatActivity {
     private TextView cr8;
     private TextView cr9;
     private Button calc;
-    int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8;
+    private Button reset;
+    int obtcrd1,obtcrd2,obtcrd3,obtcrd4,obtcrd5,obtcrd6,obtcrd7,obtcrd8,obtcrd9;
+    private TextView sub2,sub3,sub4,sub5,sub6,sub7,sub8,sub9;
 
 
     @Override
@@ -60,6 +62,149 @@ public class ThreeO extends AppCompatActivity {
         cr9 = findViewById(R.id.cr9);
         calc = findViewById(R.id.buttoncalc);
 
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        int branch = extras.getInt("branch");
+
+        if (branch==1)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18EC51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18EC52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18EC53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18EC54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18EC55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18EC56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18ECL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18ECL58");
+
+        }
+        if (branch==2)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18CS51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18CS52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18CS53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18CS54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18CS55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18CS56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18CSL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18CSL58");
+
+        }
+        if (branch==3)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18IS51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18IS52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18IS53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18IS54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18IS55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18IS56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18ISL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18ISL58");
+
+        }
+        if (branch==4)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18CV51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18CV52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18CV53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18CV54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18CV55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18CV56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18CVL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18CVL58");
+
+        }
+        if (branch==5)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18ME51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18ME52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18ME53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18ME54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18ME55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18ME56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18MEL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18MEL58");
+
+        }
+        if (branch==6)
+        {
+            sub2 = findViewById(R.id.sub51);
+            sub2.setText("18EE51");
+            sub3 = findViewById(R.id.sub52);
+            sub3.setText("18EE52");
+            sub4 = findViewById(R.id.sub53);
+            sub4.setText("18EE53");
+            sub5 = findViewById(R.id.sub54);
+            sub5.setText("18EE54");
+            sub6 = findViewById(R.id.sub55);
+            sub6.setText("18EE55");
+            sub7 = findViewById(R.id.sub56);
+            sub7.setText("18EE56");
+            sub8 = findViewById(R.id.sub57);
+            sub8.setText("18EEL57");
+            sub9 = findViewById(R.id.sub58);
+            sub9.setText("18EEL58");
+
+        }
+
+
+        reset=findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                marks1.setText("");
+                marks2.setText("");
+                marks3.setText("");
+                marks4.setText("");
+                marks5.setText("");
+                marks6.setText("");
+                marks7.setText("");
+                marks8.setText("");
+                marks9.setText("");
+
+            }
+        });
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,6 +294,15 @@ public class ThreeO extends AppCompatActivity {
                     if (mr8>=70&&mr8<80){obtcrd8=8;}
                     if (mr8>=80&&mr8<89){obtcrd8=9;}
                     if (mr8>=90){obtcrd8=10;}
+                    float mr9 = Float.parseFloat(marks9.getText().toString());
+                    if (mr8<35){obtcrd8=0;}
+                    if (mr8>=35&&mr8<40){obtcrd8=4;}
+                    if (mr8>=40&&mr8<45){obtcrd8=5;}
+                    if (mr8>=45&&mr8<60){obtcrd8=6;}
+                    if (mr8>=60&&mr8<70){obtcrd8=7;}
+                    if (mr8>=70&&mr8<80){obtcrd8=8;}
+                    if (mr8>=80&&mr8<89){obtcrd8=9;}
+                    if (mr8>=90){obtcrd8=10;}
                     float s1 = Float.parseFloat(cr1.getText().toString());
                     float s2 = Float.parseFloat(cr2.getText().toString());
                     float s3 = Float.parseFloat(cr3.getText().toString());
@@ -157,17 +311,18 @@ public class ThreeO extends AppCompatActivity {
                     float s6 = Float.parseFloat(cr6.getText().toString());
                     float s7 = Float.parseFloat(cr7.getText().toString());
                     float s8 = Float.parseFloat(cr8.getText().toString());
+                    float s9 = Float.parseFloat(cr9.getText().toString());
 
-                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100){
+                    if (mr1>100||mr2>100||mr3>100||mr4>100||mr5>100||mr6>100||mr7>100||mr8>100||mr9>100){
 
                         Toast.makeText(ThreeO.this, "INVALID MARKS GIVEN", Toast.LENGTH_LONG).show();
 
                     }
 
                     else {
-                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8;
+                        float total = mr1 + mr2 + mr3 + mr4 + mr5 + mr6 + mr7 + mr8 +mr9;
 
-                        float per1, per2, per3, per4, per5, per6, per7, per8;
+                        float per1, per2, per3, per4, per5, per6, per7, per8,per9;
 
 
                         per1=(s1*obtcrd1);
@@ -178,9 +333,10 @@ public class ThreeO extends AppCompatActivity {
                         per6=(s6*obtcrd6);
                         per7=(s7*obtcrd7);
                         per8=(s8*obtcrd8);
+                        per9=(s9*obtcrd9);
 
 
-                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8) / (s1+s2+s3+s4+s5+s6+s7+s8);
+                        float sgpa = (per1 + per2 + per3 + per4 + per5 + per6 + per7 + per8+per9) / (s1+s2+s3+s4+s5+s6+s7+s8);
                         float per = (total / 900) * 100;
 
                         Intent intent = new Intent(ThreeO.this, results.class);

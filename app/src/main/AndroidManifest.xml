@@ -10,7 +10,13 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.CGPACalculator">
-        <activity android:name=".Branch"></activity>
+        <activity android:name=".Branch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".fourE17" />
         <activity android:name=".fourO17" />
         <activity android:name=".threeO17" />
@@ -34,13 +40,8 @@
         <activity android:name=".MainActivity3" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".Scheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Scheme"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
